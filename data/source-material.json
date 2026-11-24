@@ -1,0 +1,35 @@
+{
+  "name": "知识产权项目投资归集与进展回读",
+  "material_nature": "本地合成演练资料",
+  "description": "仅供本地开发和回归，记录不代表真实机构、交易或观测。",
+  "records": {
+    "projects": [
+      {
+        "source": "registry",
+        "id": "P-7",
+        "name": "设备研发线"
+      },
+      {
+        "source": "company",
+        "id": "C-9",
+        "name": "研发设备改造"
+      }
+    ],
+    "payments": [
+      {
+        "project": "P-7",
+        "period": "2026-10",
+        "amount": 32,
+        "state": "posted"
+      }
+    ],
+    "changes": [
+      {
+        "id": "P-7",
+        "kind": "split",
+        "effective_period": "2026-11"
+      }
+    ],
+    "notes": "合成项目登记、企业回读和财务摘录。"
+  }
+}
