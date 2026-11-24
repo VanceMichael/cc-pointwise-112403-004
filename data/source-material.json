@@ -1,35 +1,90 @@
 {
-  "name": "知识产权项目投资归集与进展回读",
+  "name": "知识产权产业项目进展与实际投资凭证采集",
   "material_nature": "本地合成演练资料",
-  "description": "仅供本地开发和回归，记录不代表真实机构、交易或观测。",
-  "records": {
-    "projects": [
-      {
-        "source": "registry",
-        "id": "P-7",
-        "name": "设备研发线"
-      },
-      {
-        "source": "company",
-        "id": "C-9",
-        "name": "研发设备改造"
-      }
-    ],
-    "payments": [
-      {
-        "project": "P-7",
-        "period": "2026-10",
-        "amount": 32,
-        "state": "posted"
-      }
-    ],
-    "changes": [
-      {
-        "id": "P-7",
-        "kind": "split",
-        "effective_period": "2026-11"
-      }
-    ],
-    "notes": "合成项目登记、企业回读和财务摘录。"
-  }
+  "description": "资料中的机构、项目、交易、合同和回执均为虚构，仅用于本地开发与回归。",
+  "feeds": [
+    {
+      "id": "registry",
+      "label": "项目登记与关系变更",
+      "records": [
+        {
+          "source": "申报平台",
+          "id": "P-7",
+          "name": "设备研发线",
+          "category": "知识产权产品",
+          "valid_period": "2026-01..10"
+        },
+        {
+          "source": "企业门户",
+          "id": "C-9",
+          "name": "研发设备改造",
+          "category": "待核",
+          "valid_period": "2026-01..10"
+        },
+        {
+          "source": "申报平台",
+          "id": "P-7A",
+          "name": "设备控制子项",
+          "change": "split-from-P-7",
+          "effective_period": "2026-11"
+        }
+      ]
+    },
+    {
+      "id": "progress",
+      "label": "企业进展与验收凭证",
+      "records": [
+        {
+          "project": "P-7",
+          "period": "2026-10",
+          "progress": "到货",
+          "evidence": "收货单-R8",
+          "accepted": "no"
+        },
+        {
+          "project": "P-7",
+          "period": "2026-10",
+          "progress": "设备调试完成",
+          "evidence": "验收单-A4",
+          "accepted": "yes"
+        },
+        {
+          "project": "P-7A",
+          "period": "2026-11",
+          "progress": "子项启动",
+          "evidence": "计划单-PL2",
+          "accepted": "no"
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "label": "财务支付与简报引用",
+      "records": [
+        {
+          "payment": "PAY-31",
+          "project": "P-7",
+          "period": "2026-10",
+          "amount": "32",
+          "kind": "预付款",
+          "state": "posted"
+        },
+        {
+          "payment": "PAY-33",
+          "project": "P-7",
+          "period": "2026-10",
+          "amount": "18",
+          "kind": "验收尾款",
+          "state": "posted"
+        },
+        {
+          "brief": "产业月报-10",
+          "project": "P-7",
+          "period": "2026-10",
+          "quoted_amount": "50",
+          "state": "confirmed"
+        }
+      ]
+    }
+  ]
 }
